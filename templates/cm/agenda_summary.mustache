@@ -1,0 +1,31 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+}}
+{{#agenda}}
+<div class="agenda-summary" aria-label="{{#str}}agendainformation, format_designer{{/str}}">
+    {{#hasschedule}}
+    <div class="agenda-item agenda-schedule">
+        <i class="fa fa-clock-o" aria-hidden="true"></i>
+        <span class="sr-only">{{schedulelabel}}</span>{{schedule}}
+    </div>
+    {{/hasschedule}}
+    {{#hasduration}}
+    <div class="agenda-item agenda-duration">
+        <i class="fa fa-hourglass-half" aria-hidden="true"></i>
+        <span>{{duration}}</span>
+    </div>
+    {{/hasduration}}
+    {{#hasmodality}}
+    <div class="agenda-item agenda-modality">
+        <i class="fa {{modalityicon}}" aria-hidden="true"></i>
+        <span class="sr-only">{{modalitylabel}}</span>{{modality}}
+    </div>
+    {{/hasmodality}}
+    {{#haspedagogicaltype}}
+    <div class="agenda-item agenda-pedagogicaltype">
+        <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+        <span class="sr-only">{{pedagogicaltypelabel}}</span>{{pedagogicaltype}}
+    </div>
+    {{/haspedagogicaltype}}
+</div>
+{{/agenda}}
