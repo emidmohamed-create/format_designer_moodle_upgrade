@@ -117,5 +117,10 @@ function xmldb_format_designer_upgrade($oldversion) {
         upgrade_plugin_savepoint(true, 2024073000, 'format', 'designer');
     }
 
+    if ($oldversion < 2026072400) {
+        // Agenda metadata is stored in the existing Designer options table; no schema change is required.
+        upgrade_plugin_savepoint(true, 2026072400, 'format', 'designer');
+    }
+
     return true;
 }

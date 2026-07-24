@@ -26,6 +26,7 @@ namespace format_designer\output\courseformat\content\section;
 
 use moodle_url;
 use stdClass;
+use format_designer\local\agenda\metadata;
 
 /**
  * Base class to render a section activity list.
@@ -77,6 +78,7 @@ class cmlist extends \core_courseformat\output\local\content\section\cmlist {
             $data->cancelcopyurl = new moodle_url('/course/mod.php', ['cancelcopy' => 'true', 'sesskey' => sesskey()]);
         }
 
+        metadata::preload_for_course($course->id, array_keys($modinfo->cms));
         if (!empty($modinfo->sections[$section->section])) {
             foreach ($modinfo->sections[$section->section] as $modnumber) {
                 $mod = $modinfo->cms[$modnumber];

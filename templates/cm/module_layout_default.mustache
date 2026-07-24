@@ -57,6 +57,9 @@
         <div class="{{indentclasses}}"></div>
         <div>
             <div class="activityinstance {{modcontentclass}}">
+                    {{$ format_designer/cm/agenda_summary }}
+                        {{> format_designer/cm/agenda_summary }}
+                    {{/ format_designer/cm/agenda_summary }}
                 {{#cmformat.cmname}}
                     {{$ format_designer/courseformat/content/cm/cmname }}
                         {{> format_designer/courseformat/content/cm/cmname }}
@@ -68,6 +71,9 @@
                     </div>
                 {{/afterlink}}
             </div>
+                    {{$ format_designer/cm/agenda_details }}
+                        {{> format_designer/cm/agenda_details }}
+                    {{/ format_designer/cm/agenda_details }}
 
            {{! Module restricttions }}
             {{#modrestricted}}

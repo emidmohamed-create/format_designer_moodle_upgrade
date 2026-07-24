@@ -58,6 +58,9 @@
                         <div class="row">
                             <div class="col-12 col-md-7">
                                 <div class="activityinstance {{modcontentclass}}">
+                    {{$ format_designer/cm/agenda_summary }}
+                        {{> format_designer/cm/agenda_summary }}
+                    {{/ format_designer/cm/agenda_summary }}
                                     {{#cmformat.cmname}}
                                         {{$ format_designer/courseformat/content/cm/cmname }}
                                             {{> format_designer/courseformat/content/cm/cmname }}
@@ -88,6 +91,9 @@
                                         </div>
                                     {{/afterlink}}
                                 </div>
+                    {{$ format_designer/cm/agenda_details }}
+                        {{> format_designer/cm/agenda_details }}
+                    {{/ format_designer/cm/agenda_details }}
 
                                 {{{beforecontent}}}
 

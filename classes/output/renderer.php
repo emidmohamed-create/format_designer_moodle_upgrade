@@ -1317,6 +1317,9 @@ class renderer extends \core_courseformat\output\section_renderer {
             'duration_formatted' => $durationformatted,
             'enableactivityimage' => $enableactivityimage ?? false,
             'hascmbulk' => class_exists('core_courseformat\output\local\content\bulkedittoggler') ? true : false,
+            'agenda' => (new agenda_metadata($mod))->export_for_template($this),
+            'caneditagenda' => has_capability('moodle/course:manageactivities', context_course::instance($course->id)),
+            'editagendaurl' => new moodle_url('/course/format/designer/agenda.php', ['cmid' => $mod->id]),
         ];
         if (format_designer_has_pro()) {
             require_once($CFG->dirroot. "/local/designer/lib.php");

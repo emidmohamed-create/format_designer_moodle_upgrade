@@ -119,16 +119,17 @@
         let nodeName = event.target.nodeName;
         let preventionNodes = ['a', 'button', 'form'];
         let iscircle = event.target.closest('li.activity').classList.contains('circle-layout');
+        let isAgendaEdit = event.target.closest('.agenda-edit-link') !== null;
         let isDescription = event.target.classList.contains('mod-description-action');
         let isPadlock = event.target.classList.contains('fa-lock');
         let ispopupModule = event.target.closest('li.activity').classList.contains('popmodule');
         let isModHasURL = event.target.closest('li.activity div[data-action="go-to-url"]').getAttribute('data-url');
         let isCompletionButton = event.target.closest('button[data-action="toggle-manual-completion"]');
         let isonClickevent = event.target.getAttribute('onclick');
-        if ((nodeName in preventionNodes)
+        if (preventionNodes.includes(nodeName.toLowerCase()) || isAgendaEdit
             || document.body.classList.contains('editing') || iscircle || isDescription || isPadlock || ispopupModule
             || isModHasURL == '' || isCompletionButton || isonClickevent) {
-            if (ispopupModule && !document.body.classList.contains('editing')) {
+            if (ispopupModule && !isAgendaEdit && !document.body.classList.contains('editing')) {
                 if (event.target.closest("button[data-action='toggle-manual-completion']") === null &&
                     event.target.closest(".mod-description-action") === null) {
                     var li = event.target.closest('li.activity');

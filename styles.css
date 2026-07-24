@@ -2552,6 +2552,72 @@ body.format-designer.editing .designer .section .content .section.card-layout li
     }
 }
 
+/* Pedagogical agenda metadata. */
+.format-designer .agenda-summary,
+.format-designer .agenda-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .25rem .75rem;
+    width: 100%;
+    margin: .35rem 0;
+}
+.format-designer .agenda-item {
+    max-width: 100%;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+}
+.format-designer .agenda-item i {
+    margin-right: .25rem;
+}
+.format-designer .agenda-edit {
+    margin-top: .5rem;
+}
+.format-designer .agenda-edit-link {
+    display: inline-flex;
+    align-items: center;
+    gap: .25rem;
+    min-height: 2.75rem;
+    padding: .5rem .75rem;
+}
+.format-designer .agenda-edit-link:focus,
+.format-designer .agenda-edit-link:focus-visible {
+    outline: 3px solid var(--focus-color, #1d73aa);
+    outline-offset: 2px;
+}
+.format-designer .designer .section .content .section li.activity .activityinstance .instancename {
+    white-space: normal;
+    overflow-wrap: anywhere;
+    text-overflow: clip;
+}
+.format-designer .agenda-meetingurl a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.75rem;
+}
+
+@media (max-width: 767px) {
+    .format-designer .course-content ul.designer.kanban-board .kanban-board-activities {
+        display: block;
+        overflow: visible;
+        padding-top: 0;
+    }
+    .format-designer .course-content ul.designer.kanban-board li.section.main,
+    .format-designer .course-content ul.designer.kanban-board li.section.main#section-0 {
+        width: 100%;
+        min-width: 0;
+        max-width: none;
+        margin: 0 0 1rem;
+        padding: .5rem;
+    }
+    .format-designer .agenda-summary,
+    .format-designer .agenda-details {
+        display: block;
+    }
+    .format-designer .agenda-item {
+        margin-bottom: .35rem;
+    }
+}
+
 /*Video time*/
 
 .format-designer .designer .section.img-text.card-layout .activity.videotime {
