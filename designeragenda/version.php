@@ -24,9 +24,9 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version   = 2026072401;        // The current plugin version (Date: YYYYMMDDXX).
+$plugin->version   = 2026072402;        // The current plugin version (Date: YYYYMMDDXX).
 $plugin->requires  = 2024100700;        // Requires this Moodle version.
 $plugin->component = 'format_designeragenda';  // Full name of the plugin (used for diagnostics).
 $plugin->release = 'Designer Agenda 1.0';
-$plugin->supported = [405];
+$plugin->supported = [405, 405];
 $plugin->maturity  = MATURITY_STABLE;

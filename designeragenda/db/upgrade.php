@@ -122,5 +122,10 @@ function xmldb_format_designeragenda_upgrade($oldversion) {
         upgrade_plugin_savepoint(true, 2026072401, 'format', 'designeragenda');
     }
 
+    if ($oldversion < 2026072402) {
+        // Correct the Moodle 4.5 supported branch declaration.
+        upgrade_plugin_savepoint(true, 2026072402, 'format', 'designeragenda');
+    }
+
     return true;
 }
