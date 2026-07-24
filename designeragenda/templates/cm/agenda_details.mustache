@@ -1,0 +1,39 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+}}
+{{#agenda}}
+<div class="agenda-details" aria-label="{{#str}}agendainformation, format_designeragenda{{/str}}">
+    {{#haslocation}}
+    <div class="agenda-item agenda-location">
+        <i class="fa fa-map-marker" aria-hidden="true"></i>
+        <span class="sr-only">{{locationlabel}}</span>{{location}}
+    </div>
+    {{/haslocation}}
+    {{#hasmeetingurl}}
+    <div class="agenda-item agenda-meetingurl">
+        <i class="fa fa-video-camera" aria-hidden="true"></i>
+        <a href="{{meetingurl}}">{{meetingurllabel}}</a>
+    </div>
+    {{/hasmeetingurl}}
+    {{#hasdeliverable}}
+    <div class="agenda-item agenda-deliverable">
+        <i class="fa fa-upload" aria-hidden="true"></i>
+        <span class="sr-only">{{deliverablelabel}}</span>{{deliverable}}
+    </div>
+    {{/hasdeliverable}}
+    {{#haspracticalinfo}}
+    <div class="agenda-item agenda-practicalinfo">
+        <i class="fa fa-info-circle" aria-hidden="true"></i>
+        <span class="sr-only">{{practicalinfolabel}}</span>{{practicalinfo}}
+    </div>
+    {{/haspracticalinfo}}
+</div>
+{{/agenda}}
+{{#caneditagenda}}
+<div class="agenda-edit">
+    <a href="{{{editagendaurl}}}" class="agenda-edit-link">
+        <i class="fa fa-pencil" aria-hidden="true"></i>
+        {{#str}}editagendacard, format_designeragenda{{/str}}
+    </a>
+</div>
+{{/caneditagenda}}
